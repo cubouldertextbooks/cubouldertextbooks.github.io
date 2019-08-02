@@ -29,6 +29,8 @@
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -56,49 +58,58 @@
 
         <div class="album py-5 bg-light">
             <div class="container">
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Edition</th>
+                            <th>ISBN</th>
+                            <th>Mirror</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="cardItem card mb-4 box-shadow">
-                            <div class="card-body">
-                                <p class="text-truncate card-text">Essential Calculus</p>
-                                <p class="card-text"><i>James Stewart</i><br>2nd Edition</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a target="_blank" href="StewartCalculus.pdf"><button" class="btn btn-sm btn-outline-secondary">Download</button></a>
-                                    <small class="text-muted">9781133112297</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="cardItem card mb-4 box-shadow">
-                            <div class="card-body">
-                                <p class="text-truncate card-text">Essential University Physics</p>
-                                <p class="card-text"><i>Richard Wolfson</i><br>2nd Edition</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a target="_blank" href="WolfsonPhysics.pdf"><button" class="btn btn-sm btn-outline-secondary">Download</button></a>
-                                    <small class="text-muted">9780134988559</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="cardItem card mb-4 box-shadow">
-                            <div class="card-body">
-                                <p class="text-truncate card-text">Chemistry: The Molecular Nature of Matter and Change</p>
-                                <p class="card-text"><i>Martin Silberberg Dr.</i><br>8th Edition</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a target="_blank" href="SilberbergChemistry.pdf"><button" class="btn btn-sm btn-outline-secondary">Download</button></a>
-                                    <small class="text-muted">9780134988559</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                        <tr>
+                            <td>Essential Calculus</td>
+                            <td>James Stewart</td>
+                            <td>2nd Edition</td>
+                            <td>9781133112297</td>
+                            <td><a target="_blank" href="StewartCalculus.pdf">
+                                    <button" class="btn btn-sm btn-secondary">Download</button>
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>Essential University Physics</td>
+                            <td>Richard Wolfson</td>
+                            <td>2nd Edition</td>
+                            <td>9780321993724</td>
+                            <td><a target="_blank" href="StewartCalculus.pdf">
+                                    <button" class="btn btn-sm btn-secondary">Download</button>
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>Chemistry: The Molecular Nature of Matter and Change</td>
+                            <td>Martin Silberberg Dr.</td>
+                            <td>8th Edition</td>
+                            <td>9780134988559</td>
+                            <td><a target="_blank" href="StewartCalculus.pdf">
+                                    <button" class="btn btn-sm btn-secondary">Download</button>
+                                </a></td>
+                        </tr>
+                    </tbody>
+                </table>
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
 </body>
 
 </html>
